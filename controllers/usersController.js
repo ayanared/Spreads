@@ -57,20 +57,18 @@ router.get('/:userId', (req, res) => {
   })
 
  })
-// //===================================
-// //  READ (see the form to edit a user)
-// //===================================
-// router.get('/:userId/edit', (req, res) => {
-//   const userId = req.params.userId
-//   User.findById(userId).then(user => {
-//     res.render('Users/edit', {
-//       name: user.name,
-//       picture_link: user.picture_link,
-//       id: userId
-//     })
-//   })
+//===================================
+//  READ (see the form to edit a user)
+//===================================
+router.get('/:userId/edit', (req, res) => {
+  const userId = req.params.userId
+  User.findById(userId).then(user => {
+    res.render('Users/edit_user', {
+      user:user
+    })
+  })
 
-// })
+ })
 // //================================
 // //  PUT (edit specific user)
 // //================================

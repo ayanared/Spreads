@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="container_horizontal_center">
+        <h4>edit {{user.name}}</h4>
+    </div>
+    <div class="container_center">
+        <form action="/users/{{id}}?_method=PUT" method="POST">
+            <div class="container_column">
+                <label for="name" class="label">Name:</label>
+                <br>
+                <input type="text" name="name" placeholder="Name" class="required" value="{{user.name}}">
+                <br>
+                <label for="picture_link" class="label">Link to square picture:</label>
+                <br>
+                <input type="text" name="picture_link" placeholder="picture" value="{{user.picture_link}}">
+                <br>
+                <div class="container_horizontal_center">
+                    <input class="button small_button" type="submit" value="Save">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container_horizontal_center">
+        <a href="/users">
+            <button class="button small_button">Back to all Users</button>
+        </a>
+    </div>
+</div>

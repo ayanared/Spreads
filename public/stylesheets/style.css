@@ -147,4 +147,6 @@ input[type=text], input[type=number] {
   height: 30px;
   width: 50vw;
   border: 1px solid #ccc; 
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
