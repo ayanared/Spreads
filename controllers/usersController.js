@@ -25,39 +25,38 @@ router.get('/new', function (req, res) {
   res.render("users/new_user.hbs")
 })
 
-// //================================
-// //  POST (create new user)
-// //================================
-// router.post('/', (req, res) => {
-//   const newUser = new User({
-//     name: req.body.name,
-//     picture_link: req.body.picture_link
-//   })
-//   newUser.save()
-//     .then(user => {
-//       console.log(user.name + " is in the database")
-//       res.redirect(`/users/${user.id}`)
-//     })
-//     .catch(err => {
-//       console.log(`sorry, didn't work`)
-//       res.redirect(`/users`)
-//     })
-  
-// })
+//================================
+//  POST (create new user)
+//================================
+router.post('/', (req, res) => {
+  console.log("here")
+  const newUser = new User({
+    name: req.body.name,
+    picture_link: req.body.picture_link
+  })
+  newUser.save()
+    .then(user => {
+      console.log(user.name + " is in the database")
+      res.redirect(`/users/${user.id}`)
+    })
+    .catch(err => {
+      console.log(`sorry, didn't work`)
+      console.log(err)
+      res.redirect(`/users`)
+    })
+})
+//================================
+//  READ (see specific user)
+//================================
+router.get('/:userId', (req, res) => {
+  const userId = req.params.userId
+  User.findById(userId).then(user => {
+    res.render('Users/show_user.hbs', {
+      user: user
+    })
+  })
 
-// //================================
-// //  READ (see specific user)
-// //================================
-// router.get('/:userId', (req, res) => {
-//   const userId = req.params.userId
-//   User.findById(userId).then(user => {
-//     res.render('Users/show.hbs', {
-//       id: userId,
-//       user: user
-//     })
-//   })
-
-// })
+ })
 // //===================================
 // //  READ (see the form to edit a user)
 // //===================================

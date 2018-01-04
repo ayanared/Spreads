@@ -10,6 +10,10 @@ h1 {
   font-size:30px;
   margin:0px;
 }
+h2 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 60px;
+}
 h3 {
   font-family: 'Questrial', sans-serif;
 }
@@ -88,7 +92,7 @@ nav a:hover, nav a:focus {
   border: 2px solid #212F3D;
   background-color: rgb(0, 166, 179);
   font-size: 20px;
-  margin: 3px;
+  margin: 10px;
   font-family: 'Poiret One', cursive;
 }
 .small_button a {
