@@ -69,24 +69,24 @@ router.get('/:userId/edit', (req, res) => {
   })
 
  })
-// //================================
-// //  PUT (edit specific user)
-// //================================
-// router.put('/:userId', (req, res) => {
-//   const updated = {
-//     name: req.body.name,
-//     picture_link: req.body.picture_link
-//   }
-//   const userId = req.params.userId
-//   User.findByIdAndUpdate(userId, updated, { new: true })
-//     .then(user => {
-//       res.redirect(`/users/${userId}`)
-//     })
-//     .catch(err => {
-//       console.log(err)
-//     })
+//================================
+//  PUT (edit specific user)
+//================================
+router.put('/:userId', (req, res) => {
+  const updated = {
+    name: req.body.name,
+    picture_link: req.body.picture_link
+  }
+  const userId = req.params.userId
+  User.findByIdAndUpdate(userId, updated, { new: true })
+    .then(user => {
+      res.redirect(`/users/${userId}`)
+    })
+    .catch(err => {
+      console.log(err)
+    })
 
-// })
+ })
 // //===================================
 // //  READ (see the form to delete auser)
 // //===================================
@@ -102,7 +102,7 @@ router.get('/:userId/edit', (req, res) => {
 //       })
 //     })
 
-// })
+ //})
 // //=====================================
 // //  Destroy (actually GET) (delete user)
 // //======================================
