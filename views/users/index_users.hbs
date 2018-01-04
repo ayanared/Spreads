@@ -1,0 +1,24 @@
+<div class="body">
+    <div class="container_horizontal_center"><h3>pick a user</h3></div>
+    <div class="container_flex_group">
+        {{#each users}}
+        <span class="container_horizontal_column">
+            <a href="/users/{{id}}">
+                <div class="white_box">
+                    <div class="picture_box">
+                        <img src="{{picture_link}}" alt="picture of {{name}}">
+                    </div>
+                </div>
+            </a>
+            <a href="/users/{{id}}">
+                <h4 class="user_name">{{name}}</h4>
+            </a>
+        </span>
+        {{/each}}
+    </div>
+    <div class="container_horizontal_center"><button class="small_button">
+        <a href="/users/new">add new user</a>
+    </button>
+    </div>
+    
+</div>

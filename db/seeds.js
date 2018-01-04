@@ -15,7 +15,32 @@ User.remove()
 
 const ayana = new User({
     name: 'Ayana',
-    picture_link:'https://i.imgur.com/KSmcZFUs.jpg',
+    picture_link:'https://i.imgur.com/s1agXxYb.jpg',
+    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    reading:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
+})
+
+const olee = new User({
+    name: 'Olee',
+    picture_link:'https://i.imgur.com/s1agXxYb.jpg',
+    favLayout: [{name:String,img:"", num_of_Cards:"4", description:"3 Card Spread"}],
+    reading:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
+})
+const kristin = new User({
+    name: 'kristin',
+    picture_link:'https://i.imgur.com/s1agXxYb.jpg',
+    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    reading:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
+})
+const stacy = new User({
+    name: 'Stacy',
+    picture_link:'https://i.imgur.com/s1agXxYb.jpg',
+    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    reading:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
+})
+const mom = new User({
+    name: 'Mom',
+    picture_link:'https://i.imgur.com/s1agXxYb.jpg',
     favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
     reading:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
@@ -23,6 +48,18 @@ const ayana = new User({
 
 ayana.save()
 .then(user=>{
+    console.log (`${user.name} is in the database`)
+    return olee.save()
+})
+.then(user=>{
+    console.log (`${user.name} is in the database`)
+    return kristin.save()
+})
+.then(user=>{
+    console.log (`${user.name} is in the database`)
+    return stacy.save()
+})
+.then(user =>{
     console.log (`${user.name} is in the database`)
     mongoose.connection.close()
 })
