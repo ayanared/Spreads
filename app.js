@@ -26,6 +26,19 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
+// Now that we're connected, let's save that connection to the database in a variable.
+const db = mongoose.connection
+
+// Will log an error if db can't connect to MongoDB
+db.on('error', function (err) {
+  console.log(err)
+})
+
+// Will log "database has been connected" if it successfully connects.
+db.once('open', function () {
+  console.log('database has been connected!')
+})
+
 app.use('/', index)
 app.use('/users', users)
 
