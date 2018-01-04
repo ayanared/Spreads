@@ -2,20 +2,28 @@ body {
   padding: 0;
   margin: 0;
 }
+.body {
+  height: 70vh;
+}
 h1 {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Sacramento', cursive;
+  font-size:30px;
+  margin:0px;
 }
 header{
   background-color: #212F3D;
-  padding: 10px;
+  padding: 0px;
   color: white;
 }
-nav {
+nav{
   background-color: #00A6B3;
   padding: 5px;
 }
 .tagline {
   text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size:2vh;
+
 }
 a{
   text-decoration: none;
@@ -23,7 +31,7 @@ a{
 nav a {
   color: white;
   font-family: 'Questrial', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   margin: 5px;
   text-align: center;
 }
@@ -39,5 +47,27 @@ nav a {
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+.container_center{
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.large_button{
+  border: 2px solid #212F3D;
+  background-color: rgb(0, 166, 179);
+  font-size: 25px;
+  margin: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
+
+}
+.large_button a {
+  color:white;
+}
+.large_button:hover, .large_button:focus {
+  
+  background-color:#212F3D;
+  border: 2px solid rgb(0, 166, 179);
 }
 
