@@ -1,8 +1,43 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+header{
+  background-color: #212F3D;
+  padding: 10px;
+  color: white;
+}
+nav {
+  background-color: #00A6B3;
+  padding: 5px;
+}
+.tagline {
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+nav a {
+  color: white;
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  margin: 5px;
+  text-align: center;
+}
+.container_horizontal_spread{
+  display: flex;
+  justify-content: space-around;
+}
+.container_horizontal_center{
+  display: flex;
+  justify-content: center;
+}
+.container_horizontal_column{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-a {
-  color: #00B7FF;
-}

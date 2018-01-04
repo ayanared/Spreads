@@ -6,8 +6,8 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+const index = require('./controllers/indexController')
+const users = require('./controllers/usersController')
 
 const app = express()
 
