@@ -67,7 +67,7 @@ nav a {
 }
 .large_button:hover, .large_button:focus {
   
-  background-color:#212F3D;
+  background-color:rgb(152, 216, 221);
   border: 2px solid rgb(0, 166, 179);
 }
 
