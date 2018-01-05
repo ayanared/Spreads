@@ -13,27 +13,26 @@ router.get('/', (req, res) => {
     User.findById(userId)
         .then(user => {
             res.render('readings/index_readings.hbs', {
-                userId:userId,
+                user:user,
                 reading:user.reading
             })
         })
 })
-// //================================
-// //  READ (see new form)
-// //================================
+//================================
+//  READ (see new form)
+//================================
 
-// router.get('/new', function (req, res) {
-//     User.findById(req.params.userId)
-//         .then(user => {
-//             res.render("days/new_day.hbs", {
-//                 user: user,
-//                 userId: req.params.userId
-//             })
-//         })
-//         .catch(err => {
-//             console.log(err)
-//         })
-// })
+router.get('/new', function (req, res) {
+    User.findById(req.params.userId)
+        .then(user => {
+            res.render("readings/new_reading.hbs", {
+                user: user
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+})
 
 // //================================
 // //  POST (create new day)

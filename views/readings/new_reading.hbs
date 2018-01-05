@@ -1,0 +1,33 @@
+
+    <h3>get reading</h3>
+    <div class="container_center">
+        <form action='/users' method="POST">
+
+            <label for="question" class="label">Question:</label>
+            <br>
+            <input type="text" name="question" placeholder="question">
+            <br>
+            <label for="query_nickname" class="label">Query/Nickname:</label>
+            <br>
+            <input type="text" name="query_nickname" placeholder="query/nickname">
+            <br>
+            <div class="container_flex_group">
+                <span>
+                    <img id="current_card0_img" src="/images/blank.jpg" alt="">
+                    <input class="hidden" id="card_index_0" type="number" name="card0">
+                </span>
+                <span>
+                    <img id="current_card1_img" src="/images/blank.jpg" alt="">
+                    <input class="hidden" id="card_index_1" type="number" name="card1">
+                </span>
+                <span>
+                    <img id="current_card2_img" src="/images/blank.jpg" alt="">
+                    <input class="hidden" id="card_index_2" type="number" name="card2">
+                </span>
+            </div>
+            <input class="button small_button" type="submit" value="Save">
+    </div>
+    </form>
+    <a href="/users">
+        <button class="button small_button">Back to all Users</button>
+    </a>

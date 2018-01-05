@@ -17,6 +17,7 @@ h2 {
 }
 h3 {
   font-family: 'Questrial', sans-serif;
+  text-align: center;
 }
 h4 {
   font-family: 'Questrial', sans-serif;
@@ -204,4 +205,11 @@ li{
 }
 p{
   font-family: 'Poiret One', cursive;
+}
+.hidden{
+  display: none;
+}
+
+span{
+  margin: 20px;
 }
