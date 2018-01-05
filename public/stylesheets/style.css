@@ -76,6 +76,7 @@ nav a:hover, nav a:focus {
 .container_column_left{
   display:flex;
   flex-direction: column;
+  margin: 30px;
 }
 .large_button{
   border: 2px solid #212F3D;
