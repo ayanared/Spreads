@@ -8,10 +8,11 @@ $(() => {
             //remove card from deck
             cards.splice(random_card_index, 1)
             //set value
-            $(`#card_index_${i}`).val(random_card_index)
+            $(`#card_index_${i}`).val(pulled_card.number)
             //change picture
             $(`#current_card${i}_img`).attr('src', `/${pulled_card.cardImage}`)
-            console.log(`you clicked ${i}, the random number is: ${random_card_index} which is ${pulled_card.name}`)
+            console.log(`you clicked ${i}, the random number is: ${pulled_card.number} which is ${pulled_card.name}`)
         })
     }
+
 })

@@ -83,26 +83,27 @@ router.get('/:readingId', (req, res) => {
         })
 })
 
-// //=====================================
-// //  Destroy (actually GET) (delete day)
-// //======================================
-// router.get('/:dayId/delete', (req, res) => {
-//     const userId = req.params.userId
-//     const dayId = req.params.dayId
+//=====================================
+//  Destroy (actually GET) (delete day)
+//======================================
+router.get('/:readingId/delete', (req, res) => {
+    const userId = req.params.userId
+    const readingId = req.params.readingId
 
-//     User.findById(userId)
-//         .then(user => {
-//             user.day.id(dayId).remove()
-//             console.log('deleted day')
-//             return user.save()
-//         })
-//         .then((user) => {
-//             res.redirect(`/users/${userId}/days`)
-//             console.log('deleted day')
-//         })
-//         .catch(err => {
-//             console.log('didnt delete')
-//         })
-// })
+    User.findById(userId)
+        .then(user => {
+            user.readings.id(readingId).remove()
+            console.log('deleted reading')
+            return user.save()
+        })
+        .then((user) => {
+            res.redirect(`/users/${userId}/readings`)
+            console.log('deleted reading')
+        })
+        .catch(err => {
+            console.log('didnt delete')
+            console.log(err)
+        })
+})
 
 module.exports = router

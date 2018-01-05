@@ -6,14 +6,17 @@ $(()=>{
    
     $('#card0img_past').attr('src', `/${cards[val0].cardImage}`)
     $('#card0img_past').attr('alt', `/${cards[val0].name}`)
+    console.log(val0)
     
     const val1 = $('#past_val_card1').val()
     $('#card1img_past').attr('src', `/${cards[val1].cardImage}`)
     $('#card1img_past').attr('alt', `/${cards[val1].name}`)
+    console.log(val1)
     
     const val2 = $('#past_val_card2').val()
     $('#card2img_past').attr('src', `/${cards[val2].cardImage}`)
     $('#card2img_past').attr('alt', `/${cards[val2].name}`)
+    console.log(val2)
     
     //populating descriptions for each card
     $('#past_description_card0').text(cards[val0].cardDescription)
