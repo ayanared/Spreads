@@ -1,1 +1,13 @@
-{{reading}}
+<div class="body">
+    <div class="container_horizontal_column">
+        <h4>{{reading.date}}</h4>
+        <h4>question: {{reading.question}}</h4>
+    </div>
+
+    <div class="container_center">
+        {{#each reading.cards_index}}
+        <li id="card1" value="{{this}}"><img src="/images/blank.jpg" alt="a blank card"></li>
+        {{/each}}
+
+    </div>
+</div>
