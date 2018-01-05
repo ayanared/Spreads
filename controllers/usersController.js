@@ -9,7 +9,7 @@ const Reading = require('../models/reading')
 //================================
 router.get('/', (req, res) => {
   User.find().then(users => {
-    res.render('Users/index_users.hbs', {
+    res.render('users/index_users.hbs', {
       users: users
     })
   }).catch(err => {
@@ -63,7 +63,7 @@ router.get('/:userId', (req, res) => {
 router.get('/:userId/edit', (req, res) => {
   const userId = req.params.userId
   User.findById(userId).then(user => {
-    res.render('Users/edit_user', {
+    res.render('users/edit_user', {
       user:user
     })
   })
