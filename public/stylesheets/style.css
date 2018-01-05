@@ -13,6 +13,7 @@ h1 {
 h2 {
   font-family: 'Sue Ellen Francisco', cursive;
   font-size: 60px;
+  text-align: center;
 }
 h3 {
   font-family: 'Questrial', sans-serif;
@@ -86,6 +87,7 @@ nav a:hover, nav a:focus {
   
   background-color:rgb(152, 216, 221);
   border: 2px solid rgb(0, 166, 179);
+  cursor: pointer;
 }
 .small_button{
   border: 2px solid #212F3D;
@@ -101,6 +103,7 @@ nav a:hover, nav a:focus {
   
   background-color:rgb(152, 216, 221);
   border: 2px solid rgb(0, 166, 179);
+  cursor: pointer;
 }
 
 .container_flex_group{
@@ -149,4 +152,32 @@ input[type=text], input[type=number] {
   border: 1px solid #ccc; 
   margin-top: 2px;
   margin-bottom: 8px;
+}
+
+.button_large_red{
+  border: 2px solid #212F3D;
+  background-color: rgb(223, 80, 55);
+  font-size: 40px;
+  margin: 5px;
+  font-family: 'Poiret One', cursive;
+}
+.button_large_red a {
+  color:white;
+}
+
+
+.button_small_red{
+  border: 2px solid #212F3D;
+  background-color: rgb(223, 80, 55);
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Poiret One', cursive;
+}
+
+.button_large_red:hover, .button_large_red:focus, 
+.button_small_red:hover, .button_small_red:focus {
+  background-color:rgb(12, 29, 31);
+  color: white;
+  border: 2px solid rgb(6, 16, 17);
+  cursor: pointer;
 }

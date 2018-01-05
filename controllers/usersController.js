@@ -87,35 +87,35 @@ router.put('/:userId', (req, res) => {
     })
 
  })
-// //===================================
-// //  READ (see the form to delete auser)
-// //===================================
-// router.get('/:userId/delete', (req, res) => {
-//   console.log("got here to render delete")
-//   const userId = req.params.userId
-//   User.findById(userId)
-//     .then(user => {
-//       console.log("got here")
-//       res.render('users/delete_confirm', {
-//         name: user.name,
-//         id: user.id
-//       })
-//     })
-
- //})
-// //=====================================
-// //  Destroy (actually GET) (delete user)
-// //======================================
-// router.get('/:userId/delete_forReal', (req, res) => {
-//   const userId = req.params.userId
-//   User.findByIdAndRemove(userId)
-//   .then(user=>{
-//     res.redirect('/users')
-//     console.log('deleted user')
-//   }).catch(err=>{
-//     console.log('didnt delete')
-//   })
-// })
+//===================================
+//  READ (see the form to delete auser)
+//===================================
+router.get('/:userId/delete', (req, res) => {
+  console.log("got here to render delete")
+  const userId = req.params.userId
+  User.findById(userId)
+    .then(user => {
+      console.log("got here")
+      res.render('users/delete_user', {
+        user:user
+      })
+    })
+ })
+//=====================================
+//  Destroy (actually GET) (delete user)
+//======================================
+router.get('/:userId/delete_forReal', (req, res) => {
+  const userId = req.params.userId
+  User.findByIdAndRemove(userId)
+  .then(user=>{
+    res.redirect('/users')
+    console.log('deleted user')
+  }).catch(err=>{
+    console.log('didnt delete')
+  }).then (()=>{
+    res.redirect('/users')
+  })
+})
 
 
 module.exports = router

@@ -1,3 +1,8 @@
-<body>
-    <h4>Are you sure you want to delete {{user.name}}</h4>
-</body>
+<div class="body container_horizontal_column">
+    <h2>Are you sure you want to delete {{user.name}}</h2>
+    <div class="container_center">
+        <a href="/users/{{user.id}}/delete_forReal">
+        <button class="button_large_red">YES<br>DELETE</button>
+        </a>
+        </div>
+</div>

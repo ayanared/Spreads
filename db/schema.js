@@ -15,7 +15,6 @@ const ReadingSchema = new Schema({
     date: String
 }, {usePushEach: true})
 
-
 const UserSchema = new Schema({
     name: {type: String, required: true},
     picture_link: String,
