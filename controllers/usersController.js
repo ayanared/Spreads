@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
 router.get('/:userId', (req, res) => {
   const userId = req.params.userId
   User.findById(userId).then(user => {
-    res.render('Users/show_user.hbs', {
+    res.render('users/show_user.hbs', {
       user: user
     })
   })
