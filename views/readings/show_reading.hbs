@@ -1,10 +1,16 @@
 <div class="body">
     <div class="container_horizontal_column">
-        <h4>{{reading.date}}</h4>
+        <div class="container_horizontal_spread">
+    <a href="/users/{{user.id}}/readings"><button class="small_button">Back</button></a>
+    <h4>{{reading.date}}</h4>
+    <a href="/users/{{user.id}}/readings/reading.id/delete"><button class="button_small_red">delete</button></a>
+    
+    </div>
+        
         <h4>question: {{reading.question}}</h4>
     </div>
 
-    <div class="container_center">
+    <div class="container_flex_group">
         {{#each reading.cards_index}}
         <li id="past_val_card{{@index}}" value="{{this}}"><img id="card{{@index}}img_past" src="/images/blank.jpg" alt="a blank card"></li>
         {{/each}}
@@ -15,6 +21,9 @@
         <h1 id="past_header_card{{@index}}"></h1>
         <p id="past_description_card{{@index}}"></p>
         {{/each}}
-
+    </div >
+    <div class="container_horizontal_column">
+    <a href="/users/{{user.id}}/readings"><button class="small_button">Back</button></a>
+    <a href="/users/{{user.id}}/readings/reading.id/delete"><button class="button_small_red">delete</button></a>
     </div>
 </div>

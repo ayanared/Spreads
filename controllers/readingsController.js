@@ -67,6 +67,7 @@ router.get('/:readingId', (req, res) => {
         const reading = user.reading.id(readingId)
         
         res.render('readings/show_reading.hbs', {
+            user:user,
             reading : reading         
         })
     })
