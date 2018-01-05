@@ -6,7 +6,7 @@
 
     <div class="container_center">
         {{#each reading.cards_index}}
-        <li id="card1" value="{{this}}"><img src="/images/blank.jpg" alt="a blank card"></li>
+        <li id="card{{@index}}val" value="{{this}}"><img id="card{{@index}}img_past" src="/images/blank.jpg" alt="a blank card"></li>
         {{/each}}
 
     </div>
