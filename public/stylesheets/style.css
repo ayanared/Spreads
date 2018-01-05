@@ -181,3 +181,15 @@ input[type=text], input[type=number] {
   border: 2px solid rgb(6, 16, 17);
   cursor: pointer;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  font-family: 'Poiret One', cursive;
+  color: #212F3D;
+  border: 1px solid  rgb(0, 166, 179);
+  padding: 15px;
+  text-align: center;
+}

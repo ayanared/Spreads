@@ -1,0 +1,31 @@
+<h2>{{user.name}}</h2>
+<div class="container_center">
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Query</th>
+            <th>Cards Drawn</th>
+            <th>See Reading</th>
+        </tr>
+
+        {{#each reading}}
+        <tr>
+            <td>{{date}}</td>
+            <td>{{query_nickname}}</td>
+            <td> {{#each cards_index}} {{@index}} {{/each}}</td>
+            <td>
+                <a href="/users/{{../userId}}/readings/{{id}}">see reading</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<div class="container_center">
+    <a href="/users/{{user.id}}/readings/new">
+        <button class="small_button">get reading</button>
+    </a>
+</div>
+<a href="/users/{{userId}}">
+    <button class="button small_button">back to {{user.name}}</button>
+</a>
+</div>

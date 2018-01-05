@@ -9,6 +9,7 @@ const methodOverride = require('method-override')
 
 const index = require('./controllers/indexController')
 const users = require('./controllers/usersController')
+const readings = require('./controllers/readingsController')
 
 const app = express()
 
@@ -43,6 +44,7 @@ db.once('open', function () {
 
 app.use('/', index)
 app.use('/users', users)
+app.use('/users/:userId/readings', readings)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
