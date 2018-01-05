@@ -206,6 +206,7 @@ table, th, td {
 li{
   list-style-type: none;
   margin: 20px;
+  display: inline;
 }
 p{
   font-family: 'Poiret One', cursive;
@@ -216,4 +217,8 @@ p{
 
 span{
   margin: 20px;
+}
+
+.tiny_pic{
+  height: 40px;
 }

@@ -1,7 +1,6 @@
 $(() => {
     console.log("get a reading!")
     const cards = createCards()
-    const cardspulled = []
     for (let i = 0; i < 3; i++) {
         $(`#current_card${i}_img`).one("click", () => {
             const random_card_index = Math.floor(Math.random() * cards.length);

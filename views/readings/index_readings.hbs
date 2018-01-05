@@ -4,19 +4,13 @@
         <tr>
             <th>Date</th>
             <th>Query</th>
-            <th>Cards Drawn</th>
             <th>See Reading</th>
         </tr>
 
         {{#each readings}}
         <tr>
             <td>{{date}}</td>
-            <td>{{query_nickname}}</td>
-            <td> {{#each cards_index}} 
-                
-                {{this}} 
-                
-                {{/each}}
+            <td>{{query_nickname}}
             </td>
             <td>
                 <a href="/users/{{../user.id}}/readings/{{id}}">see reading</a>
