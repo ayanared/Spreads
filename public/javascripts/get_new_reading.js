@@ -1,11 +1,18 @@
 $(() => {
     console.log("get a reading!")
     const cards = createCards()
+    const cardspulled = []
     for (let i = 0; i < 3; i++) {
-        $(`#current_card${i}_img`).on("click", () => {
-            const random_card = Math.floor(Math.random() * cards.length);
-
-            console.log(`you clicked ${i}, the random number is: ${random_card}`)
+        $(`#current_card${i}_img`).one("click", () => {
+            const random_card_index = Math.floor(Math.random() * cards.length);
+            const pulled_card = cards[random_card_index]
+            //remove card from deck
+            cards.splice(random_card_index, 1)
+            //set value
+            $(`#card_index_${i}`).val(random_card_index)
+            //change picture
+            $(`#current_card${i}_img`).attr('src', `/${pulled_card.cardImage}`)
+            console.log(`you clicked ${i}, the random number is: ${random_card_index} which is ${pulled_card.name}`)
         })
     }
 })

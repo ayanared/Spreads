@@ -34,27 +34,27 @@ router.get('/new', function (req, res) {
         })
 })
 
-// //================================
-// //  POST (create new day)
-// //================================
-// router.post('/', (req, res) => {
-//     const userId = req.params.userId
-//     const newDay = req.body
-//     User.findById(userId)
-//         .then((user) => {
-//             user.day.push(newDay)
-//             return user.save()
-//         })
-//         .then((user) => {
-//             res.redirect(`/users/${userId}/days`)
-//         })
-//         .catch(err => {
-//             console.log(`sorry, didn't save user`)
-//             console.log(err)
-//             res.redirect(`/users/${userId}/days`)
-//         })
+//================================
+//  POST (create new reading)
+//================================
+router.post('/', (req, res) => {
+    const userId = req.params.userId
+    const newReading = req.body
+    User.findById(userId)
+        .then((user) => {
+            user.reading.push(newDay)
+            return user.save()
+        })
+        .then((user) => {
+            res.redirect(`/users/${userId}/readings`)
+        })
+        .catch(err => {
+            console.log(`sorry, didn't save user`)
+            console.log(err)
+            res.redirect(`/users/${userId}/readings`)
+        })
 
-// })
+})
 
 //================================
 //  READ (see specific reading)
