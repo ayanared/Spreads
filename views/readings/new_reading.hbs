@@ -2,8 +2,12 @@
     <div class="container_horizontal_column">
     <h3>get reading</h3>
     
-        <form action='/users' method="POST">
+        <form action='/users/{{user._id}}/readings' method="POST">
         <div class="container_horizontal_column">
+            <label for="date" class="label">Date:</label>
+            <br>
+            <input type="text" name="date" placeholder="date">
+            <br>
             <label for="question" class="label">Question:</label>
             <br>
             <input type="text" name="question" placeholder="question">
@@ -29,8 +33,8 @@
             <input class="button small_button" type="submit" value="Save">
             </div>
     </form>
-    <a href="/users">
-        <button class="button small_button">Back to all Users</button>
+    <a href="/users/{{user.id}}/readings">
+        <button class="button small_button">Back</button>
     </a>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
         .then(user => {
             res.render('readings/index_readings.hbs', {
                 user:user,
-                reading:user.reading
+                readings:user.readings
             })
         })
 })
@@ -39,10 +39,17 @@ router.get('/new', function (req, res) {
 //================================
 router.post('/', (req, res) => {
     const userId = req.params.userId
-    const newReading = req.body
+    const newReading = {
+        query_nickname:req.body.query_nickname,
+        question: req.body.question,
+        cards_index: [req.body.card0,req.body.card1, req.body.card2 ],
+        date: req.body.date
+    }
+    console.log(newReading)
     User.findById(userId)
         .then((user) => {
-            user.reading.push(newDay)
+            console.log("found user")
+            user.readings.push(newReading)
             return user.save()
         })
         .then((user) => {
@@ -63,7 +70,7 @@ router.get('/:readingId', (req, res) => {
     const readingId = req.params.readingId
     const userId = req.params.userId
     User.findById(userId).then(user => {
-        const reading = user.reading.id(readingId)
+        const reading = user.readings.id(readingId)
         
         res.render('readings/show_reading.hbs', {
             user:user,
@@ -76,34 +83,6 @@ router.get('/:readingId', (req, res) => {
         })
 })
 
-// //================================
-// //  PUT (edit day)
-// //================================
-// router.put('/:dayId', (req, res) => {
-//     const updated = {
-//         month: req.body.month,
-//         day: req.body.day,
-//         year: req.body.year,
-//         mood: req.body.mood,
-//         moon: req.body.moon,
-//         workoutIntensity: req.body.workoutIntensity,
-//         workout: req.body.workout
-//     }
-//     const userId = req.params.userId
-//     const dayId = req.params.dayId
-//     User.findById(userId)
-//         .then(user => {
-//             user.day.id(dayId).set(updated)
-//             return user.save()
-//         })
-//         .then(user => {
-//             res.redirect(`/users/${userId}/days/`)
-
-//         })
-//         .catch(err => {
-//             console.log(err)
-//         })
-// })
 // //=====================================
 // //  Destroy (actually GET) (delete day)
 // //======================================
