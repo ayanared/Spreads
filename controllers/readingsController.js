@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     User.findById(userId)
         .then(user => {
             res.render('readings/index_readings.hbs', {
-                user:user,
+                userId:userId,
                 reading:user.reading
             })
         })
@@ -57,51 +57,24 @@ router.get('/', (req, res) => {
 
 // })
 
-// //================================
-// //  READ (see specific day and edit)
-// //================================
-// router.get('/:dayId', (req, res) => {
-//     const dayId = req.params.dayId
-//     const userId = req.params.userId
-//     User.findById(userId).then(user => {
-//         const day = user.day.id(dayId)
-//         const month = {
-//             [`m${day.month}`]: " selected"
-//         }
-//         const dayOfMonth = {
-//             [`d${day.day}`]:" selected"
-//         }
-//         const year = {
-//             [`y${day.year}`]:" selected"
-//         }
-//         const moonWOspace = day.moon.replace(' ', "")
-//         const moon = {
-//             [`moon${moonWOspace}`]:" selected"
-//         }
-//         const mood = {
-//             [`mood${day.mood}`]:" selected"
-//         }
-//         const workoutIntensity = {
-//             [`wI${day.workoutIntensity}`]:" selected"
-//         }
-
-//         res.render('days/show_edit.hbs', {
-//             day: day,
-//             userId: userId,
-//             dayId: dayId,
-//             month: month,
-//             dayOfMonth:dayOfMonth,
-//             year:year,
-//             moon:moon,
-//             mood:mood,
-//             workoutIntensity:workoutIntensity          
-//         })
-//     })
-//         .catch(err => {
-//             console.log(err)
-//             console.log('did not work')
-//         })
-// })
+//================================
+//  READ (see specific reading)
+//================================
+router.get('/:readingId', (req, res) => {
+    const readingId = req.params.readingId
+    const userId = req.params.userId
+    User.findById(userId).then(user => {
+        const reading = user.reading.id(readingId)
+        
+        res.render('readings/show_reading.hbs', {
+            reading : reading         
+        })
+    })
+        .catch(err => {
+            console.log(err)
+            console.log('did not work')
+        })
+})
 
 // //================================
 // //  PUT (edit day)
