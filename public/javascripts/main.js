@@ -14,7 +14,10 @@ $(()=>{
 
     //populating descriptions for each card
     $('#past_description_card0').text(cards[val0].cardDescription)
+    $('#past_header_card0').text('Card 1')
     $('#past_description_card1').text(cards[val1].cardDescription)
+    $('#past_header_card1').text('Card 2')
     $('#past_description_card2').text(cards[val2].cardDescription)
+    $('#past_header_card2').text('Card 3')
     
 })
