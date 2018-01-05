@@ -3,6 +3,7 @@
     <h3>get reading</h3>
     
         <form action='/users' method="POST">
+        <div class="container_horizontal_column">
             <label for="question" class="label">Question:</label>
             <br>
             <input type="text" name="question" placeholder="question">
@@ -26,8 +27,12 @@
                 </span>
             </div>
             <input class="button small_button" type="submit" value="Save">
+            </div>
     </form>
     <a href="/users">
         <button class="button small_button">Back to all Users</button>
     </a>
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+  <script src="/javascripts/cards.js"></script>
+<script src="/javascripts/get_new_reading.js"></script>
