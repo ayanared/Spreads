@@ -89,6 +89,7 @@ router.get('/:readingId', (req, res) => {
 router.get('/:readingId/delete', (req, res) => {
     const userId = req.params.userId
     const readingId = req.params.readingId
+    console.log("inside delete route")
 
     User.findById(userId)
         .then(user => {
