@@ -1,4 +1,20 @@
+<h2>Layouts</h2>
+<div class="container_center">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Number of Cards</th>
+            <th>View</th>
+        </tr>
+        {{#each layouts}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{num_of_cards}}</td>
+            <td><a href="/users/{{../user._id}}/layouts/{{id}}">see details</a></td>
+        </tr>
+        {{/each}}
+    </table>
 
-{{#each layouts}}
-{{this}}
-{{/each}}
+
+
+</div>
