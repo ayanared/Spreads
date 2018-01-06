@@ -1,0 +1,25 @@
+<div class="container_horizontal_column">
+    <h3>save new layout</h3>
+
+    <form action='/users/{{user._id}}/layouts' method="POST">
+        <div class="container_horizontal_column">
+            <label for="name" class="label">name:</label>
+            <br>
+            <input type="text" name="name" placeholder="name">
+            <br>
+            <label for="img" class="label">link to picture of layout:</label>
+            <br>
+            <input type="text" name="img" placeholder="img link">
+            <br>
+            <label for="num_of_cards" class="label">How many cards are in this layout:</label>
+            <br>
+            <input type="number" name="num_of_cards" placeholder="number of cards">
+            <br>
+            <label for="description" class="label">What does each card mean:</label>
+            <br>
+            <input type="text" name="description" placeholder="description">
+            <br>
+            <input class="button small_button" type="submit" value="Save">
+        </div>
+        
+    </form>

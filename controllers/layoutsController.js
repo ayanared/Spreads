@@ -18,21 +18,21 @@ router.get('/', (req, res) => {
             })
         })
 })
-// //================================
-// //  READ (see new form)
-// //================================
+//================================
+//  READ (see new form)
+//================================
 
-// router.get('/new', function (req, res) {
-//     User.findById(req.params.userId)
-//         .then(user => {
-//             res.render("readings/new_reading.hbs", {
-//                 user: user
-//             })
-//         })
-//         .catch(err => {
-//             console.log(err)
-//         })
-// })
+router.get('/new', function (req, res) {
+    User.findById(req.params.userId)
+        .then(user => {
+            res.render("layouts/new_layout.hbs", {
+                user: user
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+})
 
 // //================================
 // //  POST (create new reading)
