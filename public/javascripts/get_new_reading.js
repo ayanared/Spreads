@@ -11,6 +11,8 @@ $(() => {
             $(`#card_index_${i}`).val(pulled_card.number)
             //change picture
             $(`#current_card${i}_img`).attr('src', `/${pulled_card.cardImage}`)
+            $(`#current_header_card${i}`).text(`Card ${i+1}`)
+            $(`#current_description_card${i}`).text(`${pulled_card.cardDescription}`)
             console.log(`you clicked ${i}, the random number is: ${pulled_card.number} which is ${pulled_card.name}`)
         })
     }

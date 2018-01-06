@@ -1,8 +1,7 @@
-
-    <div class="container_horizontal_column">
+<div class="container_horizontal_column">
     <h3>get reading</h3>
-    
-        <form action='/users/{{user._id}}/readings' method="POST">
+
+    <form action='/users/{{user._id}}/readings' method="POST">
         <div class="container_horizontal_column">
             <label for="date" class="label">Date:</label>
             <br>
@@ -19,24 +18,37 @@
             <div class="container_flex_group">
                 <span>
                     <img id="current_card0_img" src="/images/blank.jpg" alt="">
-                    <input class="hidden" id="card_index_0" type="number" name="card0">
+                    <input class="hidden" id="card_index_0" type="number" name="card0" value=78>
                 </span>
                 <span>
                     <img id="current_card1_img" src="/images/blank.jpg" alt="">
-                    <input class="hidden" id="card_index_1" type="number" name="card1">
+                    <input class="hidden" id="card_index_1" type="number" name="card1" value=78>
                 </span>
                 <span>
                     <img id="current_card2_img" src="/images/blank.jpg" alt="">
-                    <input class="hidden" id="card_index_2" type="number" name="card2">
+                    <input class="hidden" id="card_index_2" type="number" name="card2" value=78>
                 </span>
             </div>
             <input class="button small_button" type="submit" value="Save">
+        </div>
+        <div class="container_column_left">
+            <div class="container_column_left">
+                <h1 id="current_header_card0"></h1>
+                <p id="current_description_card0"></p>
+                <h1 id="current_header_card1"></h1>
+                <p id="current_description_card1"></p>
+                <h1 id="current_header_card2"></h1>
+                <p id="current_description_card2"></p>
+                
             </div>
+    </form>
+
     </form>
     <a href="/users/{{user.id}}/readings">
         <button class="button small_button">Back</button>
     </a>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
-  <script src="/javascripts/cards.js"></script>
-<script src="/javascripts/get_new_reading.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="/javascripts/cards.js"></script>
+    <script src="/javascripts/get_new_reading.js"></script>

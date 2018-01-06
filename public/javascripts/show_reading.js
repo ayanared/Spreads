@@ -2,28 +2,14 @@ $(()=>{
     const cards = createCards()
     console.log("here")
     //populating past cards pulled
-    const val0 = $('#past_val_card0').val()
-   
-    $('#card0img_past').attr('src', `/${cards[val0].cardImage}`)
-    $('#card0img_past').attr('alt', `/${cards[val0].name}`)
-    console.log(val0)
     
-    const val1 = $('#past_val_card1').val()
-    $('#card1img_past').attr('src', `/${cards[val1].cardImage}`)
-    $('#card1img_past').attr('alt', `/${cards[val1].name}`)
-    console.log(val1)
-    
-    const val2 = $('#past_val_card2').val()
-    $('#card2img_past').attr('src', `/${cards[val2].cardImage}`)
-    $('#card2img_past').attr('alt', `/${cards[val2].name}`)
-    console.log(val2)
-    
+    for(let i=0; i<3; i++){
+    const index_of_chosen_card = $(`#past_val_card${i}`).val()
+    console.log(index_of_chosen_card)
+    $(`#card${i}img_past`).attr(`src`, `/${cards[index_of_chosen_card].cardImage}`)
+    $(`#card${i}img_past`).attr(`alt`, `/${cards[index_of_chosen_card].name}`)
     //populating descriptions for each card
-    $('#past_description_card0').text(cards[val0].cardDescription)
-    $('#past_header_card0').text('Card 1')
-    $('#past_description_card1').text(cards[val1].cardDescription)
-    $('#past_header_card1').text('Card 2')
-    $('#past_description_card2').text(cards[val2].cardDescription)
-    $('#past_header_card2').text('Card 3')
-    
+    $(`#past_description_card${i}`).text(cards[index_of_chosen_card].cardDescription)
+    $(`#past_header_card${i}`).text(`Card ${i+1}`)
+    }
 })
