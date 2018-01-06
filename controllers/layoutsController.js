@@ -57,25 +57,26 @@ router.post('/', (req, res) => {
 
 })
 
-// //================================
-// //  READ (see specific reading)
-// //================================
-// router.get('/:readingId', (req, res) => {
-//     const readingId = req.params.readingId
-//     const userId = req.params.userId
-//     User.findById(userId).then(user => {
-//         const reading = user.readings.id(readingId)
+//================================
+//  READ (see specific layout)
+//================================
+router.get('/:layoutId', (req, res) => {
+    const layoutId = req.params.layoutId
+    const userId = req.params.userId
+    console.log("see a layout")
+    User.findById(userId).then(user => {
+        const cardlayout = user.favLayouts.id(layoutId)
         
-//         res.render('readings/show_reading.hbs', {
-//             user:user,
-//             reading : reading         
-//         })
-//     })
-//         .catch(err => {
-//             console.log(err)
-//             console.log('did not work')
-//         })
-// })
+        res.render('layouts/show_layout.hbs', {
+            user:user,
+            cardlayout:cardlayout         
+        })
+    })
+        .catch(err => {
+            console.log(err)
+            console.log('did not work')
+        })
+})
 
 // //=====================================
 // //  Destroy (actually GET) (delete day)
