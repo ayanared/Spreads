@@ -34,34 +34,28 @@ router.get('/new', function (req, res) {
         })
 })
 
-// //================================
-// //  POST (create new reading)
-// //================================
-// router.post('/', (req, res) => {
-//     const userId = req.params.userId
-//     const newReading = {
-//         query_nickname:req.body.query_nickname,
-//         question: req.body.question,
-//         cards_index: [req.body.card0,req.body.card1, req.body.card2 ],
-//         date: req.body.date
-//     }
-//     console.log(newReading)
-//     User.findById(userId)
-//         .then((user) => {
-//             console.log("found user")
-//             user.readings.push(newReading)
-//             return user.save()
-//         })
-//         .then((user) => {
-//             res.redirect(`/users/${userId}/readings`)
-//         })
-//         .catch(err => {
-//             console.log(`sorry, didn't save user`)
-//             console.log(err)
-//             res.redirect(`/users/${userId}/readings`)
-//         })
+//================================
+//  POST (create new layout)
+//================================
+router.post('/', (req, res) => {
+    const userId = req.params.userId
+    const newLayout = req.body
+    User.findById(userId)
+        .then((user) => {
+            console.log("found user")
+            user.favLayouts.push(newLayout)
+            return user.save()
+        })
+        .then((user) => {
+            res.redirect(`/users/${userId}/layouts`)
+        })
+        .catch(err => {
+            console.log(`sorry, didn't save user`)
+            console.log(err)
+            res.redirect(`/users/${userId}/layouts`)
+        })
 
-// })
+})
 
 // //================================
 // //  READ (see specific reading)
