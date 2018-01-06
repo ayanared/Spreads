@@ -18,7 +18,7 @@ const ReadingSchema = new Schema({
 const UserSchema = new Schema({
     name: {type: String, required: true},
     picture_link: String,
-    favLayout: [FavLayoutSchema],
+    favLayouts: [FavLayoutSchema],
     readings: [ReadingSchema]
 
 }, {usePushEach: true})

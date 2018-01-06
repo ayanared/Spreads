@@ -1,11 +1,11 @@
 <div class="body">
     <div class="container_horizontal_column">
         <h2>{{user.name}}</h2>
-        <a href="/users/{{user.id}}/readings/new"><button class="large_button">GET 3 Card
+        <a href="/users/{{user._id}}/readings/new"><button class="large_button">GET 3 Card
             <br>Reading</button></a>
         <div class="container_flex_group">
             <a href="/users/{{user.id}}/readings"><button class="small_button">See Past Readings</button></a>
-            <button class="small_button">See Favorite Layouts</button>
+                <a href="/users/{{user.id}}/layouts"><button class="small_button">See Favorite Layouts</button></a>
         </div>
     </div>
     <div class="container_center">

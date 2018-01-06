@@ -16,32 +16,32 @@ User.remove()
 const ayana = new User({
     name: 'Ayana',
     picture_link:'https://i.imgur.com/s1agXxYb.jpg',
-    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    favLayouts: [{name:'setting intention',img:"https://i.imgur.com/uNHppv2.jpg", num_of_Cards:"6", description:"setting intentions"}],
     readings:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
 
 const olee = new User({
     name: 'Olee',
     picture_link:'https://i.imgur.com/s1agXxYb.jpg',
-    favLayout: [{name:String,img:"", num_of_Cards:"4", description:"3 Card Spread"}],
+    favLayouts: [{name:'You, Your Path, Your Potential',img:"https://www.buzzle.com/images/hobbies/tarot-card-reading/three-card-spread.jpg", num_of_Cards:"4", description:"3 Card Spread"}],
     readings:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
 const kristin = new User({
     name: 'kristin',
     picture_link:'https://i.imgur.com/s1agXxYb.jpg',
-    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    favLayouts: [{name:'You, Relationship, Partner',img:"https://www.buzzle.com/images/hobbies/tarot-card-reading/three-card-spread.jpg", num_of_Cards:"3", description:"3 Card Spread"}],
     readings:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
 const stacy = new User({
     name: 'Stacy',
     picture_link:'https://i.imgur.com/s1agXxYb.jpg',
-    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    favLayouts: [{name:'Situation, Action, Outcome',img:"https://www.buzzle.com/images/hobbies/tarot-card-reading/three-card-spread.jpg", num_of_Cards:"3", description:"3 Card Spread"}],
     readings:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
 const mom = new User({
     name: 'Mom',
     picture_link:'https://i.imgur.com/s1agXxYb.jpg',
-    favLayout: [{name:String,img:"", num_of_Cards:"3", description:"3 Card Spread"}],
+    favLayouts: [{name:'Idea, Process, Aspiration',img:"https://www.buzzle.com/images/hobbies/tarot-card-reading/three-card-spread.jpg", num_of_Cards:"3", description:"3 Card Spread"}],
     readings:[{query_nickname:"what do I really want", question:"what do I really want", cards_index:[1,2,3], date:"today"}]
 })
 

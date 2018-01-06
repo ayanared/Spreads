@@ -13,6 +13,9 @@ h1 {
 a h1{
   color: white;
 }
+a h1:hover, a h1:focus{
+  color: #00A6B3;
+}
 
 h2 {
   font-family: 'Sue Ellen Francisco', cursive;

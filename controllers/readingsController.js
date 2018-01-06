@@ -9,13 +9,14 @@ const Reading = require('../models/reading')
 //================================
 router.get('/', (req, res) => {
     const userId = req.params.userId
-    console.log("userId" + userId)
     User.findById(userId)
         .then(user => {
             res.render('readings/index_readings.hbs', {
-                user:user,
-                readings:user.readings
+                user: user,
+                readings: user.readings
             })
+        }).catch(err => {
+            console.log(err)
         })
 })
 //================================
@@ -40,9 +41,9 @@ router.get('/new', function (req, res) {
 router.post('/', (req, res) => {
     const userId = req.params.userId
     const newReading = {
-        query_nickname:req.body.query_nickname,
+        query_nickname: req.body.query_nickname,
         question: req.body.question,
-        cards_index: [req.body.card0,req.body.card1, req.body.card2 ],
+        cards_index: [req.body.card0, req.body.card1, req.body.card2],
         date: req.body.date
     }
     console.log(newReading)
@@ -71,10 +72,10 @@ router.get('/:readingId', (req, res) => {
     const userId = req.params.userId
     User.findById(userId).then(user => {
         const reading = user.readings.id(readingId)
-        
+
         res.render('readings/show_reading.hbs', {
-            user:user,
-            reading : reading         
+            user: user,
+            reading: reading
         })
     })
         .catch(err => {
