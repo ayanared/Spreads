@@ -1,8 +1,18 @@
-
-<h2>{{cardlayout.name}}</h2>
+<h2>
+    {{cardlayout.name}}
+</h2>
 <div class="container_horizontal_column">
-<img src="{{cardlayout.img}}" alt="{{cardlayout.name}}">
-<h1>Description</h1>
-<p>{{cardlayout.description}}</p>
+    <div class="layout_img_container">
+        <img class="layout_img" src="{{cardlayout.img}}" alt="{{cardlayout.name}}">
+    </div>
+    <h3>Number of cards: {{cardlayout.num_of_cards}}</h3>
+    <h1>Description</h1>
+    <p>{{cardlayout.description}}</p>
+    <a href="/users/{{user._id}}/layouts">
+        <button class="small_button">Back</button>
+    </a>
+    <a href="/users/{{user._id}}/laoyouts/{{cardlayout._id}}/delete">
+        <button class="button_small_red">delete</button>
+    </a>
 
 </div>

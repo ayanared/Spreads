@@ -150,7 +150,7 @@ nav a:hover, nav a:focus {
 
 img{
   max-height: 100%;
-  max-width: auto;
+  width: auto;
 }
 
 label{
@@ -224,4 +224,11 @@ span{
 
 .tiny_pic{
   height: 40px;
+}
+.layout_img{
+  max-width: 100%;
+  height: auto;
+}
+.layout_img_container{
+  max-width: 50vw;
 }
