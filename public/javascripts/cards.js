@@ -754,7 +754,8 @@ function createCards(){
       number: 62,
       cardImage: `images/rwpagewands.jpg`,
       info: `http://www.learntarot.com/wpg.htm`,
-      cardDescription: ``
+      cardDescription: `The element of fire in it's most delicate and fragile beginnings comes with restlessness and initial fantasies, often silly and childish but only like this it can become a process towards actuality. He is in love with his energy and constantly seeks for new stimulation. But with his far-reaching ambitions he is a lover unready for commitment. Here one is looking for freedom or escape, it can also mean wide travel. It is time for the individual to discover some new stirring of creative potential within oneself.
+      Negative: A fly-by-night. `
     },
     {
       name: `page of cups`,

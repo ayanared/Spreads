@@ -241,3 +241,13 @@ textarea{
   font-size:20px;
   width: 50vw;
 }
+ul{
+  padding: 0px;
+  margin: 0px;
+}
+.card_description{
+  font-size: 14px;
+}
+.card_description_img{
+  margin-right: 5px;
+}
