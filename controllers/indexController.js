@@ -5,5 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.redirect(`/users`)})
 
-
+router.get('/tarotmeanings', (req, res)=> {
+  res.render('tarot_meanings')
+})
 module.exports = router;
