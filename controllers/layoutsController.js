@@ -78,28 +78,28 @@ router.get('/:layoutId', (req, res) => {
         })
 })
 
-// //=====================================
-// //  Destroy (actually GET) (delete day)
-// //======================================
-// router.get('/:readingId/delete', (req, res) => {
-//     const userId = req.params.userId
-//     const readingId = req.params.readingId
-//     console.log("inside delete route")
+//=====================================
+//  Destroy (actually GET) (delete layout)
+//======================================
+router.get('/:layoutId/delete', (req, res) => {
+    const userId = req.params.userId
+    const layoutId = req.params.layoutId
+    console.log("inside delete route")
 
-//     User.findById(userId)
-//         .then(user => {
-//             user.readings.id(readingId).remove()
-//             console.log('deleted reading')
-//             return user.save()
-//         })
-//         .then((user) => {
-//             res.redirect(`/users/${userId}/readings`)
-//             console.log('deleted reading')
-//         })
-//         .catch(err => {
-//             console.log('didnt delete')
-//             console.log(err)
-//         })
-// })
+    User.findById(userId)
+        .then(user => {
+            user.favLayouts.id(layoutId).remove()
+            console.log('deleted reading')
+            return user.save()
+        })
+        .then((user) => {
+            res.redirect(`/users/${userId}/layouts`)
+            console.log('deleted layouts')
+        })
+        .catch(err => {
+            console.log('didnt delete')
+            console.log(err)
+        })
+})
 
  module.exports = router
