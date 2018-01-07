@@ -19,12 +19,10 @@
         {{/each}}
     </table>
 </div>
-<div class="container_center">
-    <a href="/users/{{user.id}}/readings/new">
-        <button class="small_button">get reading</button>
-    </a>
-</div>
-<a href="/users/{{userId}}">
+<div class="container_horizontal_column">
+    <a href="/users/{{user.id}}/readings/new"> <button class="small_button">get reading</button></a>
+
+<a href="/users/{{user._id}}">
     <button class="button small_button">back to {{user.name}}</button>
 </a>
-</div>
+</div></div>
