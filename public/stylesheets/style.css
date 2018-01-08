@@ -86,8 +86,8 @@ nav a:hover, nav a:focus {
 .container_column_left{
   display:flex;
   flex-direction: column;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 button{
   border: none;
