@@ -6,7 +6,7 @@ body {
   height: 70vh;
 }
 h1 {
-  font-family: 'Sacramento', cursive;
+  font-family: Helvetica, sans-serif;
   font-size:30px;
   margin:0px;
 }
@@ -18,16 +18,16 @@ a h1:hover, a h1:focus{
 }
 
 h2 {
-  font-family: 'Sue Ellen Francisco', cursive;
+  font-family: Helvetica, sans-serif;
   font-size: 60px;
   text-align: center;
 }
 h3 {
-  font-family: 'Questrial', sans-serif;
+  font-family: Helvetica, sans-serif;
   text-align: center;
 }
 h4 {
-  font-family: 'Questrial', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 .user_name{
   color: #212F3D;
@@ -47,7 +47,7 @@ nav{
 }
 .tagline {
   text-align: center;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: Helvetica, sans-serif;
   font-size:2vh;
 
 }
@@ -56,7 +56,7 @@ a{
 }
 nav a {
   color: white;
-  font-family: 'Questrial', sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 15px;
   margin: 5px;
   text-align: center;
@@ -94,7 +94,7 @@ nav a:hover, nav a:focus {
   background-color: rgb(0, 166, 179);
   font-size: 25px;
   margin: 5px;
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
 }
 .large_button a {
   color:white;
@@ -110,7 +110,7 @@ nav a:hover, nav a:focus {
   background-color: rgb(0, 166, 179);
   font-size: 20px;
   margin: 10px;
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
 }
 .small_button a {
   color:white;
@@ -158,10 +158,10 @@ img{
 }
 
 label{
-  font-family: 'Questrial', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 input[type=text], input[type=number] {
-  font-family: 'Sue Ellen Francisco';
+  font-family: Helvetica, sans-serif;
   font-size: 20px;
   padding: 5px; 
   height: 30px;
@@ -176,7 +176,7 @@ input[type=text], input[type=number] {
   background-color: rgb(223, 80, 55);
   font-size: 40px;
   margin: 5px;
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
 }
 .button_large_red a {
   color:white;
@@ -188,7 +188,7 @@ input[type=text], input[type=number] {
   background-color: rgb(223, 80, 55);
   font-size: 20px;
   margin: 10px;
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
 }
 
 .button_large_red:hover, .button_large_red:focus, 
@@ -204,7 +204,7 @@ table {
 }
 
 table, th, td {
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
   color: #212F3D;
   border: 1px solid  rgb(0, 166, 179);
   padding: 15px;
@@ -216,7 +216,7 @@ li{
   display: inline;
 }
 p{
-  font-family: 'Poiret One', cursive;
+  font-family: Helvetica, sans-serif;
 }
 .hidden{
   display: none;
@@ -237,7 +237,7 @@ span{
   max-width: 50vw;
 }
 textarea{
-  font-family: 'Sue Ellen Francisco', sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size:20px;
   width: 50vw;
 }
